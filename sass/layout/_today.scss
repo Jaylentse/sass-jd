@@ -1,0 +1,10 @@
+.today {
+  margin-top: 22px;
+  .recommendation {
+    display: inline-block;
+    vertical-align: top;
+    width: nth($recommendation,1);
+    height: nth($recommendation,2);
+    background: nth($recommendation,3);
+  }
+}

@@ -1,0 +1,61 @@
+/*global variables*/
+$center-width: 1210px !default;
+$red: #C81623;
+
+/*site-nav variables*/
+$site-nav-height: 30px !default;
+$site-nav-bgc: #f1f1f1 !default;;
+$site-nav-send-hover: #fff;
+$separate-color: #ddd;
+
+/*topbanner variables*/
+$t-b-h: 80px!default;
+$t-b-bgc: #8A26C6 !default;
+$t-b-close-i: 19px;
+
+/*search variables*/
+$search-h: 104px;
+$search-box-w: 534px;
+$search-box-h: 33px;
+$search-box-border: 2px solid #B81A14;
+$input-w: 454px;
+$input-h: 33px;
+$input-font: 1.4rem #666666;
+$sm-btn: 80px 33px #fff #B81A14 1.6rem;
+
+$hot-color: #666666;
+
+$car-format: (width: 139px, height: 35px, bgc: #f9f9f9, bc: #DFDFDF);
+
+/*shortcut variables*/
+$sc-h: 46px;
+$sc-bb: 2px solid #B31610;
+$sc-pdli-width: 210px;
+$sc-pdli-h: 48px #B31610;
+$sc-pdli-item: 485px/15 #CA111A;
+
+/*people variables*/
+$people-h: 603px;
+$people-bg: url(../img/banner.jpg) no-repeat center top;
+
+/*main variables*/
+$aside-w: 248px;
+$aside-h: 472px;
+$aside-bd: 1px solid #E4E4E4;
+$aside-bulletin-h: 43px;
+$aside-bulletin-h-pd: 0 15px;
+$aside-bulletin-h-bd: 1px dotted #F7F7F7;
+$table-w: 62px;
+$table-h: 218px/3;
+$icon-w: 25px;
+$icon-h: 24px;
+$icon-pos: (0 0) (0 -27px) (0 -52px) (0 -77px) (0 -102px) (0 -126px) (0 -151px) (0 -176px) (0 -201px) (0 -227px) (0 -252px) (0 -277px);
+
+/*today variables*/
+$recommendation: 210px 158px (url(../img/today.png) no-repeat -213px -136px);
+
+/*footer variables*/
+$slogan: (h:98px,bgc:#F5F5F5);
+$dl-lineH: 22px;
+$dl-mg: 15px 126px 0 0;
+$dd-color: #666;

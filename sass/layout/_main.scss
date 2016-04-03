@@ -1,0 +1,139 @@
+/*mains begin*/
+
+.main {
+  width: $center-width - 220px;
+  padding-left: 220px;
+  padding-top: 12px;
+  .display {
+    position: relative;
+    height: 474px;
+    .prev, .next {
+      position: absolute;
+      font-family: "consolas";
+      text-align: center;
+      line-height: 66px;
+      width: 30px;
+      height: 66px;
+      color: #fff;
+      font-size: 30px;
+      background-color: rgba(0, 0, 0, 0.3);
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      cursor: pointer;
+      opacity: 0;
+      -webkit-transition: opacity .25s linear;
+      -moz-transition: opacity .25s linear;
+      -ms-transition: opacity .25s linear;
+      -o-transition: opacity .25s linear;
+      transition: opacity .25s linear;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+    &:hover .prev, &:hover .next {
+      opacity: 1;
+    }
+    .next {
+      right: 0;
+    }
+    ul {
+      position: absolute;
+      bottom: 3px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 149px;
+      li {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 20px;
+        color: #fff;
+        cursor: pointer;
+        &.actived {
+          background-color: rgb(202,17,26);
+        }
+      }
+    }
+  }
+  img {
+    height: 474px;
+    width: 730px;
+  }
+  .aside-info {
+    width: $aside-w;
+    height: $aside-h;
+    border: $aside-bd;
+    overflow: hidden;
+    a {
+      color:#686868;
+    }
+    h3 {
+      height: $aside-bulletin-h;
+      line-height: $aside-bulletin-h;
+      padding: $aside-bulletin-h-pd;
+      border-bottom: $aside-bulletin-h-bd;
+      color: #838383;
+      .more {
+        font-size: .85em;
+        vertical-align: text-top;
+      }
+    }
+    .bulletin {
+      border-bottom: 1px dashed #F7F7F7;
+      ul {
+        padding: 10px 0 5px 20px;
+        line-height: 29px;
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+    }
+    table {
+      overflow: hidden;
+      td {
+        text-align: center;
+        width: $table-w;
+        height: $table-h;
+        font-size: 1.2rem;
+        a {
+          display: inline-block;
+          padding-top: 16px;
+          width: 100%;
+          height: $table-h - 16px;
+        }
+        [class|=icon] {
+          @include icon("../img/hua.png", $icon-w, $icon-h);
+          display: block;
+          margin: 0 auto;
+          margin-bottom: 10px;
+        }
+        @for $i from 2 through 12 {
+          .icon-#{$i} {
+            background-position: nth($icon-pos,$i);
+          }
+        }
+        &.free {
+          position: relative;
+          &::after {
+            content: url(../img/song.png);
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+        }
+      }
+      tr:not(:last-child) {
+        border-bottom: 1px solid #EDEDEC;
+      }
+      colgroup col {
+        border-right:  1px solid #EDEDEC;
+      }
+    }
+  }
+}
+
+/*mains end*/

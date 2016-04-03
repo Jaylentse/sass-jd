@@ -1,0 +1,62 @@
+/*site-nav begin*/
+.site-nav {
+  height: $site-nav-height;
+  line-height: $site-nav-height;
+  background-color: $site-nav-bgc;
+  font-size: 1.2rem;
+  cursor: default;
+}
+.site-nav-send {
+  padding: 0 25px 0 10px;
+  &:hover {
+    background-color: $site-nav-send-hover;
+    .dw-tr {
+      -webkit-transform: rotate(180deg) translateY(3px);
+      -moz-transform: rotate(180deg) translateY(3px);
+      -ms-transform: rotate(180deg) translateY(3px);
+      -o-transform: rotate(180deg) translateY(3px);
+      transform: rotate(180deg) translateY(3px);
+      -webkit-transform-origin: 50% 50%;
+      -moz-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+      -o-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+    }
+  }
+}
+.site-nav-bar li {
+  display: inline-block;
+  &:not(:last-child) {
+    @include separate;
+  }
+  a {
+    padding-left: 1em;
+  }
+  &.more {
+    @include separate(21px);
+  }
+  .tel {
+    @include icon("../img/tel.png",15px,20px);
+    margin-right: 5px;
+    margin-bottom: 3px;
+  }
+  &:hover {
+    .tel {
+      @include icon("../img/tel.png",15px,20px, 0 -25px);
+    }
+    @extend .color-red;
+    .dw-tr {
+      -webkit-transform: rotate(180deg) translateY(2px);
+      -moz-transform: rotate(180deg) translateY(2px);
+      -ms-transform: rotate(180deg) translateY(2px);
+      -o-transform: rotate(180deg) translateY(2px);
+      transform: rotate(180deg) translateY(2px);
+      -webkit-transform-origin: 50% 50%;
+      -moz-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+      -o-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+    }
+  }
+}
+/*site-nav end*/

@@ -1,0 +1,71 @@
+.footer {
+  margin-top: 20px;
+  .slogan {
+    position: relative;
+    height: map_get($slogan, h);
+    background-color: map_get($slogan, bgc);
+    img {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    @for $i from 1 through 4 {
+      .slogan#{$i}{
+        margin-left:  -906px+302px*$i;
+      }
+    }
+  }
+  .guide {
+    border-bottom: 1px solid #FFB4B3;
+    padding-bottom: 35px;
+    dl {
+      float: left;
+      margin: $dl-mg;
+      dt {
+        font-size: 1.5rem;
+        line-height: 35px;
+      }
+      a {
+        color: $dd-color;
+        font-size: 1.2rem;
+        line-height: 21px;
+        &:hover {
+          @extend .color-red;
+        }
+      }
+    }
+    .last-dl {
+      margin-right: 0;
+    }
+    .coverage {
+      padding-left: 15px;
+      width: 198px;
+      height: 155px;
+      margin-right: 39px;
+      background: url("../img/china.png") 0 -130px;
+      dd {
+        padding-top: 15px;
+      }
+      .detail {
+        text-align: right;
+      }
+    }
+  }
+  .copyRight {
+    border-top: 1px solid #FF3F3A;
+    text-align: center;
+    padding-top: 23px;
+    padding-bottom: 16px;
+    .links a {
+      padding: 0 15px 0 12px;
+    }
+    .safe-info {
+      img {
+        margin: 12px 6px 25px 6px;
+        display: inline-block;
+      }
+    }
+  }
+}

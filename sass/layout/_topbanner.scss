@@ -1,0 +1,17 @@
+/*topbanner begin*/
+.topbanner {
+  text-align: center;
+  background-color: $t-b-bgc;
+  height: $t-b-h;
+  i {
+    @include icon("../img/close.png", $t-b-close-i, $t-b-close-i);
+    position: absolute;
+    margin-left: -$t-b-close-i;
+    margin-top: 5px;
+    cursor: pointer;
+    &:hover {
+      @include icon("../img/close.png", $t-b-close-i, $t-b-close-i, 0 (-$t-b-close-i));
+    }
+  }
+}
+/*topbanner end*/

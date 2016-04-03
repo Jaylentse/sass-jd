@@ -1,0 +1,99 @@
+/*设置rem*/
+html {
+  font-size: 10px;
+}
+/*占位符*/
+%horizontal-vertical-center {
+  margin: 0 auto;
+}
+/*混合宏*/
+@mixin banxin($height, $width: $center-width){
+  width: $width;
+  height: $height;
+  @extend %horizontal-vertical-center;
+}
+@mixin separate($margin-left: 11px, $margin-right: 10px) {
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: $separate-color;
+    vertical-align: text-bottom;
+    margin-left: $margin-left;
+    margin-right: $margin-right;
+  }
+}
+
+@mixin icon($url, $width, $height, $position: 0 0){
+  display: inline-block;
+  vertical-align: middle;
+  width: $width;
+  height: $height;
+  background: url($url) no-repeat $position;
+}
+
+@mixin next($height, $right, $fz){
+  &::after {
+    content: ">";
+    font-family: "consolas";
+    position: absolute;
+    height: $height;
+    line-height: $height;
+    right: $right;
+    font-size: $fz;
+  }
+}
+/*公共类*/
+.fl {
+  float: left!important;
+}
+.fr {
+  float: right!important;
+}
+.center {
+  width: $center-width;
+  @extend %horizontal-vertical-center;
+}
+/*函数*/
+
+/*清除浮动*/
+.clearfix {
+  *zoom: 1;
+  &::after,&::before {
+    content: '';
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}
+/*倒三角*/
+.dw-tr {
+  -webkit-transition: transform .2s linear;
+  -moz-transition: transform .2s linear;
+  -ms-transition: transform .2s linear;
+  -o-transition: transform .2s linear;
+  transition: transform .2s linear;
+  position: absolute;
+  height: 6px;
+  width: 9px;
+  overflow: hidden;
+  margin-top: 13px;
+  margin-left: 3px;
+  &::after {
+    content: '◇';
+    display: block;
+    position: absolute;
+    font: 400 15px/15px "consolas";
+    color: #686868!important;
+    top: -6px;
+  }
+}
+.color-red {
+  color: $red !important;
+}
+::selection {
+  color: #fff;
+  background-color: $red;
+}

@@ -1,0 +1,47 @@
+/*shortcut begin*/
+.shortcut {
+  height: $sc-h;
+  min-width: $center-width;
+  border-bottom: $sc-bb;
+  .product-list {
+    height: $sc-h;
+  }
+  h3 {
+    width: $sc-pdli-width - 10px;
+    height: nth($sc-pdli-h, 1);
+    line-height: nth($sc-pdli-h, 1);
+    background-color: nth($sc-pdli-h, 2);
+    padding-left: 10px;
+    a {
+      color: #fff;
+    }
+  }
+  ul.prod-ul {
+    width: $sc-pdli-width;
+    color: #fff;
+    li{
+      position: relative;
+      @include next(nth($sc-pdli-item, 1), 10px, 1.6rem);
+      height: nth($sc-pdli-item, 1);
+      line-height: nth($sc-pdli-item, 1);
+      background-color:nth($sc-pdli-item, 2);
+      padding-left: 11px;
+      &:hover {
+        background-color: #fff;
+        color:  nth($sc-pdli-item, 2);
+      }
+    }
+  }
+  .pages {
+    height: $sc-h;
+    li {
+      float: left;
+      height: $sc-h;
+      line-height: $sc-h;
+      padding: 0 20px;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+  }
+}
+/*shortcut end*/

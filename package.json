@@ -1,0 +1,15 @@
+{
+  "name": "jd-sass",
+  "version": "1.0.0",
+  "description": "jd with sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jd",
+    "sass"
+  ],
+  "author": "jaylen tse",
+  "license": "ISC"
+}

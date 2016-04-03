@@ -1,0 +1,9 @@
+/*people begin*/
+.people {
+  position: absolute;
+  width: 100%;
+  height: $people-h;
+  background: $people-bg;
+  z-index: -1;
+}
+/*people end*/
